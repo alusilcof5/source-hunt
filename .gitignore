@@ -1,0 +1,23 @@
+# ─── Entorno ──────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ─── Dependencias ─────────────────────────────────────────────
+node_modules/
+
+# ─── Build / cache ─────────────────────────────────────────────
+dist/
+.cache/
+.parcel-cache/
+.vite/
+
+# ─── Sistema operativo ────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Editores ──────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo

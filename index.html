@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SourceHunt 🔍 — Encuentra fuentes para tu trabajo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- Header -->
+    <header>
+      <div class="logo-wrap">
+        <span class="logo-icon">🔍</span>
+        <span class="logo-text">SourceHunt</span>
+      </div>
+      <p class="tagline">El agente que busca en internet por ti — solo fuentes fiables 🎯</p>
+    </header>
+
+    <!-- API Key -->
+    <div class="api-box">
+      <label>🔑 Tu API Key de Google Gemini</label>
+      <div class="api-row">
+        <input type="password" id="apiKey" placeholder="AIzaSy..." autocomplete="off">
+      </div>
+      <p class="api-hint">
+        Consíguela gratis en
+        <a href="https://aistudio.google.com/app/apikey" target="_blank">aistudio.google.com</a>
+        — se guarda solo en tu navegador.
+      </p>
+    </div>
+
+    <!-- Search input -->
+    <div class="search-card">
+      <label>📚 ¿Sobre qué es tu trabajo?</label>
+      <div class="search-row">
+        <input
+          type="text"
+          id="topicInput"
+          placeholder="Ej: cambio climático, la Revolución Francesa, la célula eucariota..."
+          autocomplete="off"
+        >
+      </div>
+
+      <!-- Level selector -->
+      <div class="level-row" id="levelRow">
+        <span class="level-label">Nivel:</span>
+        <button class="level-btn active" data-level="ESO">🏫 ESO</button>
+        <button class="level-btn" data-level="Bachillerato">🎓 Bachillerato</button>
+        <button class="level-btn" data-level="básico">🧒 Primaria</button>
+      </div>
+    </div>
+
+    <!-- Search button -->
+    <button class="btn-search" id="searchBtn">🚀 Buscar fuentes fiables</button>
+
+    <!-- Error -->
+    <div class="error-box" id="errorBox"></div>
+
+    <!-- Loading — the "wow" moment -->
+    <div class="loading" id="loading">
+      <div class="radar">
+        <div class="radar-ring ring-1"></div>
+        <div class="radar-ring ring-2"></div>
+        <div class="radar-ring ring-3"></div>
+        <span class="radar-icon">🔍</span>
+      </div>
+      <p class="loading-title" id="loadingTitle">Iniciando búsqueda...</p>
+      <p class="loading-sub" id="loadingSub">El agente está usando Google Search</p>
+      <!-- Live tool log -->
+      <div class="tool-log" id="toolLog">
+        <div class="tool-log-header">
+          <span class="dot dot--amber"></span>
+          <span>Actividad del agente</span>
+        </div>
+        <div class="tool-log-body" id="toolLogBody"></div>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div id="results" style="display:none">
+      <div class="results-header">
+        <div>
+          <h2 class="results-title">📋 Fuentes encontradas</h2>
+          <p class="results-sub" id="resultsSub"></p>
+        </div>
+        <button class="btn-copy" id="copyBtn" title="Copiar lista">📋 Copiar lista</button>
+      </div>
+
+      <div id="sourcesList"></div>
+
+      <div class="actions">
+        <button class="btn-secondary" id="newSearchBtn">🔄 Nueva búsqueda</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
