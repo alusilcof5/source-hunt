@@ -14,10 +14,10 @@ import {
 const STORAGE_KEY = "sourcehunt_apikey";
 
 const LOADING_TITLES = [
-  "Buscando en internet... 🌐",
-  "El agente está usando Google Search 🔍",
-  "Evaluando fiabilidad de fuentes... 🧐",
-  "¡Casi listo! 📚",
+  "Buscando en internet... ",
+  "El agente está usando Google Search ",
+  "Evaluando fiabilidad de fuentes... ",
+  "¡Casi listo! ",
 ];
 
 // ─── State ────────────────────────────────────────────────────────────

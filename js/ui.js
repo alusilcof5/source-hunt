@@ -64,7 +64,7 @@ export const clearLog = () =>
 export const setSearching = on => {
   const btn = dom.searchBtn();
   btn.disabled = on;
-  btn.textContent = on ? "⏳ Buscando..." : "🚀 Buscar fuentes fiables";
+  btn.textContent = on ? "⏳ Buscando..." : "Buscar fuentes fiables";
 };
 
 // ─── Type badge helper ────────────────────────────────────────────────
@@ -126,7 +126,7 @@ export const copySourcesAsText = sources => {
   navigator.clipboard.writeText(text).then(() => {
     const btn = dom.copyBtn();
     btn.textContent = "✅ Copiado";
-    setTimeout(() => (btn.textContent = "📋 Copiar lista"), 2000);
+    setTimeout(() => (btn.textContent = "Copiar lista"), 2000);
   });
 };
 
